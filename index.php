@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("week13sql2.foppes.digital","u623952480_root","Dare1took!","u623952480_data");
+$conn = mysqli_connect("localhost","u623952480_root","Dare1took!","u623952480_data");
 
 if (!$conn) {
     die("Connect Failed". mysqli_connect_error());
