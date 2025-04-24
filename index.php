@@ -6,14 +6,14 @@ if (!$conn) {
     die("Connect Failed". mysqli_connect_error());
 }
 
-$sql = "SEELECT useres.username, users.email, orders.product_name,orders.order_date
+$sql = "SELECT useres.username, users.email, orders.product_name,orders.order_date
 FROM users
 JOIN orders ON users.user_id = orders.user_id";
 
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) { 
-    echo"<h2> Orders<h2>";
+    echo"<h2> Orders</h2>";
     echo"<table border='1'>";
     echo"<tr><th>Username</th><th>Email</th><th>Product</th><th>Order Date</th></tr>";
 
@@ -28,7 +28,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "</table>";
 }
 else {  
-    echo "No oders to show";
+    echo "No orders to show";
 }
 
 mysqli_close($conn);    
