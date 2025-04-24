@@ -6,7 +6,7 @@ if (!$conn) {
     die("Connect Failed". mysqli_connect_error());
 }
 
-$sql = "SELECT useres.username, users.email, orders.product_name,orders.order_date
+$sql = "SELECT users.username, users.email, orders.product_name,orders.order_date
 FROM users
 JOIN orders ON users.user_id = orders.user_id";
 
@@ -24,6 +24,7 @@ if (mysqli_num_rows($result) > 0) {
         echo "<td>" . $row["email"] ."</td>";
         echo "<td>" . $row["product_name"] ."</td>";
         echo "<td>" . $row["order_date"] ."</td>";
+        echo "</tr>";
 }   
     echo "</table>";
 }
