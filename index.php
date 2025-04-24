@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 $conn = mysqli_connect("localhost","u623952480_root","Dare1took!","u623952480_data");
 
 if (!$conn) {
